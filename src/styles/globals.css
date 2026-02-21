@@ -7,15 +7,8 @@
 
 @layer base {
   button {
-    @apply bg-background w-46 border font-semibold text-2xl text-foreground border-foreground transition-all duration-500 p-2 rounded-xl hover:bg-foreground hover:text-background cursor-pointer;
+    @apply bg-background w-42 md:w-46 border font-semibold text-2xl text-foreground border-foreground transition-all duration-500 p-2 rounded-xl hover:bg-foreground hover:text-background cursor-pointer;
   }
-}
-
-/* =====================
-   Layout
-   ===================== */
-body {
-  overflow: hidden;
 }
 
 /* =====================
@@ -152,30 +145,7 @@ body {
 }
 
 .button-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  /* duration 3s → 1.5s, delay 2.5s → 1.25s (0.5x) */
   animation: buttons-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
-}
-
-.cool-button {
-  position: relative;
-  padding: 0.875rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  letter-spacing: 0.02em;
-  line-height: 1;
 }
 
 .cool-button::before {
@@ -193,36 +163,6 @@ body {
   left: 100%;
 }
 
-.physique-button {
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #ffffff;
-}
-
-.physique-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(255, 255, 255, 0.3);
-}
-
-.chat-button {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.chat-button:hover {
-  transform: translateY(-2px);
-  border-color: #ffffff;
-  box-shadow: 0 0 28px rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.lunar-button {
-  background: transparent;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px dashed rgba(255, 255, 255, 0.3);
-}
-
 .lunar-button::after {
   content: '';
   position: absolute;
@@ -236,18 +176,4 @@ body {
 
 .lunar-button:hover::after {
   top: 100%;
-}
-
-.lunar-button:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.7);
-  color: #ffffff;
-}
-
-.icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  display: inline-block;
-  vertical-align: middle;
 }
