@@ -109,10 +109,6 @@ body {
   }
 }
 
-.logo-container {
-  position: relative;
-}
-
 .logo-img {
   animation: logo-reveal 2s ease-out both, glitch 5s steps(1) infinite 2s;
 }
@@ -158,6 +154,8 @@ body {
 .button-group {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1.25rem;
   /* duration 3s → 1.5s, delay 2.5s → 1.25s (0.5x) */
   animation: buttons-in 1.5s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
